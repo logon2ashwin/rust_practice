@@ -1,4 +1,5 @@
-use std::io;
+// use std::io;
+use rust_practice::sort::bubble_sort;
 //
 //
 // fn main() {
@@ -32,17 +33,20 @@ use std::io;
 
 
 fn main() {
-    let mut name: Option<String> = None;
-    let mut dummy = String::new();
+    // let mut name: Option<String> = None;
+    // let mut dummy = String::new();
 
-        println!("Enter the fibbonacci index");
-        io::stdin()
-            .read_line(&mut dummy)
-            .expect("Failed to read line");
+    //     println!("Enter the fibbonacci index");
+    //     io::stdin()
+    //         .read_line(&mut dummy)
+    //         .expect("Failed to read line");
 
-        name = Some(dummy);
-        match name{
-            Some(val) => println!("Entered value is {}", val),
-            None => println!("No value"),
-        }
+    //     name = Some(dummy);
+    //     match name{
+    //         Some(val) => println!("Entered value is {}", val),
+    //         None => println!("No value"),
+    //     }
+    let mut arr: [i32; 10] = [6,4,3,7,8,1,2,3,0,9];
+    bubble_sort::run(&mut arr);
+    println!("sorted array {:?}", arr);
 }
